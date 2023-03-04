@@ -61,7 +61,6 @@ namespace L01_2020PM606_API.Controllers
 
                 if (publicacionExist == null) { return NotFound(); }
 
-                publicacionExist.publicacionId = publicacionActualizar.publicacionId;
                 publicacionExist.titulo = publicacionActualizar.titulo;
                 publicacionExist.descripcion = publicacionActualizar.descripcion;
                 publicacionExist.usuarioId = publicacionActualizar.usuarioId;

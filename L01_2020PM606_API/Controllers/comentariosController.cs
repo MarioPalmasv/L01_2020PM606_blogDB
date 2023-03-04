@@ -61,7 +61,6 @@ namespace L01_2020PM606_API.Controllers
 
                 if (comentarioExist == null) { return NotFound(); }
 
-                comentarioExist.comentarioId = comentarioActualizar.comentarioId;
                 comentarioExist.publicacionId = comentarioActualizar.publicacionId;
                 comentarioExist.comentario = comentarioActualizar.comentario;
                 comentarioExist.usuarioId = comentarioActualizar.usuarioId;
@@ -107,7 +106,7 @@ namespace L01_2020PM606_API.Controllers
         }
 
         [HttpGet]
-        [Route("find/{filtro}")] //nombre y apellido
+        [Route("findbypublicacionId/{filtro}")]
 
         public IActionResult buscar_comentario(int filtro)
         {
